@@ -4,7 +4,8 @@
   "description": "Web scraping with Playwright",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scraper": "node scraper.js",
+    "scraper:2": "node -e \"const { spawnSync } = require('child_process'); for(let i = 0; i < 3; i++) spawnSync('node', ['scraper.js'], { stdio: 'inherit' });\""
   },
   "keywords": [
     "Web",
