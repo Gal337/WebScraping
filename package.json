@@ -12,5 +12,9 @@
     "Playwright"
   ],
   "author": "Gal Sesek",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.35.1",
+    "prettier": "^2.8.8"
+  }
 }
