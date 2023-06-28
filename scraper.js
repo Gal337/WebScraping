@@ -1,5 +1,6 @@
 const playwright = require('playwright');
 const random_useragent = require('random-useragent');
+const fs = require('fs');
 
 const BASE_URL = "https://github.com/topic/playwright";
 
@@ -29,6 +30,8 @@ const BASE_URL = "https://github.com/topic/playwright";
       });
     });
     // Store data into file
+    const logger = fs.createWriteStream("data.txt", { flag: 'w' });
+    logger.write(JSON.stringify(repositories));
     // Close browser
     await browser.close();
   })().catch(error => {
