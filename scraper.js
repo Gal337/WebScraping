@@ -31,7 +31,7 @@ const BASE_URL = "https://github.com/topic/playwright";
     });
     // Store data into file
     const logger = fs.createWriteStream("data.txt", { flag: 'w' });
-    logger.write(JSON.stringify(repositories));
+    logger.write(JSON.stringify(repositories, null, ' '));
     // Close browser
     await browser.close();
   })().catch(error => {
